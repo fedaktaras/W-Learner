@@ -17,8 +17,8 @@ public:
     void getVal(QStringList &w, QStringList &t);
 private:
 
-    QStringList words;
-    QStringList translation;
+    //QStringList words;
+    //QStringList translation;
     Ui::WordsAdding *ui;
 };
 
