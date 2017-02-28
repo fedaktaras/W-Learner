@@ -74,10 +74,10 @@
    <widget class="QPushButton" name="LoadWords">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>230</y>
-      <width>171</width>
-      <height>51</height>
+      <x>330</x>
+      <y>220</y>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -175,6 +175,26 @@
     </property>
     <property name="text">
      <string>Delete Words</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="write_words">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>260</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Write Words</string>
     </property>
    </widget>
   </widget>

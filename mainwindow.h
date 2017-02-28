@@ -8,12 +8,15 @@
 #include <QPushButton>
 #include <QString>
 #include <QLabel>
+#include <QTextEdit>
+#include <QDialog>
 #include <fstream>
 #include <vector>
 #include <queue>
 #include <utility>
 #include <string>
 #include <algorithm>
+#include "writingwords.h"
 
 namespace Ui {
 class MainWindow;
@@ -27,7 +30,8 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-
+public slots:
+    void loadFromDialog();
 private slots:
     void on_LoadWords_clicked();
 
@@ -43,16 +47,21 @@ private slots:
 
     void on_DeleteWords_clicked();
 
+    void on_write_words_clicked();
+
 private:
     std::pair<std::string, std::string > current;
     std::queue < std::pair<std::string, std::string >  > words;
     std::ifstream file;
     std::string toCompare;
-
+    WritingWords *w;
+    QStringList wordsQSList;
+    QStringList translationQSList;
     void openFile(QString);
     void readFromFile();
     void startLesson();
     void showResultOfOpening();
+    //void loadFromWritingWords(QStringList &w, QStringList &t);
 
 
 

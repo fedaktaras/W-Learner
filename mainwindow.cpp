@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QFileDialog>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -8,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("W-Learner");
+
 }
 
 MainWindow::~MainWindow()
@@ -115,6 +117,10 @@ void MainWindow::on_pushButton_clicked()
     }
     refresh();
 }
+//void loadFromWritingWords(QStringList *w, QStringList *t)
+//{
+
+//}
 
 void MainWindow::on_DeleteWords_clicked()
 {
@@ -134,4 +140,27 @@ void MainWindow::blink()
     ui->line->setStyleSheet("color: #76ee00");
     QTimer::singleShot(300, this, SLOT(refresh()));
 
+}
+
+void MainWindow::on_write_words_clicked()
+{
+    w = new WritingWords;
+    connect(w, SIGNAL(accepted()), this, SLOT(loadFromDialog()));
+    w->show();
+}
+
+void MainWindow::loadFromDialog()
+{
+    //int var = 9;
+    w->getVal(wordsQSList, translationQSList);
+    qDebug()<<"var";
+    auto it_t = translationQSList.begin();
+    auto it = wordsQSList.begin();
+    while(it!=wordsQSList.end())
+    {
+        words.push(std::pair<std::string, std::string>(it->toStdString(), it_t->toStdString()));
+        it++;
+        it_t++;
+    }
+    refresh();
 }

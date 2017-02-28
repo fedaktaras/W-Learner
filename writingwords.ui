@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>writing_words</class>
+ <widget class="QDialog" name="writing_words">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>562</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>350</y>
+     <width>156</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>524</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>14</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>Word</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="word">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="plainText">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>14</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>Translation</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="translate">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
