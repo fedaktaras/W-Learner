@@ -16,7 +16,7 @@
 #include <utility>
 #include <string>
 #include <algorithm>
-#include "writingwords.h"
+#include "wordsadding.h"
 
 namespace Ui {
 class MainWindow;
@@ -37,8 +37,6 @@ private slots:
 
     void on_line_returnPressed();
 
-
-
     void refresh();
 
     void blink();
@@ -54,7 +52,7 @@ private:
     std::queue < std::pair<std::string, std::string >  > words;
     std::ifstream file;
     std::string toCompare;
-    WritingWords *w;
+    WordsAdding *w;
     QStringList wordsQSList;
     QStringList translationQSList;
     void openFile(QString);

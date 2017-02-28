@@ -25,11 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    writingwords.cpp
+    wordsadding.cpp
+        wordsadding.cpp
 
 HEADERS  += mainwindow.h \
-    writingwords.h
+    wordsadding.h
 
 FORMS    += mainwindow.ui \
-    writingwords.ui
+    wordsadding.ui
 RC_FILE = W-Learner.rc

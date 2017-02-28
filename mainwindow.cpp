@@ -144,7 +144,7 @@ void MainWindow::blink()
 
 void MainWindow::on_write_words_clicked()
 {
-    w = new WritingWords;
+    w = new WordsAdding;
     connect(w, SIGNAL(accepted()), this, SLOT(loadFromDialog()));
     w->show();
 }
@@ -153,7 +153,7 @@ void MainWindow::loadFromDialog()
 {
     //int var = 9;
     w->getVal(wordsQSList, translationQSList);
-    qDebug()<<"var";
+    //qDebug()<<"var";
     auto it_t = translationQSList.begin();
     auto it = wordsQSList.begin();
     while(it!=wordsQSList.end())
